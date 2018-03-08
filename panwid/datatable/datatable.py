@@ -568,7 +568,6 @@ class DataTable(urwid.WidgetWrap, urwid.listbox.ListWalker):
             return range(len(self) - 1, -1, -1)
         return range(len(self))
 
-    def __getitem__(self, position):
         # logger.debug("walker get: %d" %(position))
         if position < 0 or position >= len(self.filtered_rows): raise IndexError
         try:
